@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
-import { Header } from "./components/Header";
+import { ClassComponent } from "./components/ClassComponent";
+import { FunctionComponent } from "./components/FunctionComponent";
+import { Profile } from "./components/Profile";
 
 // Zadanie nr 1
 // Stworzyć komponent main -> zawiera komponent Title (h1) oraz komponent artykuł (article)
@@ -11,6 +11,36 @@ import { Header } from "./components/Header";
 const App = () => {
   const titleText = "tytul naszej strony";
   const list = ["home", "contact", "gallery", "cos"];
+  const profileList = [
+    {
+      _id: '123',
+      username: "J Kowalski",
+      tag: "Admin",
+      location: "Warsaw",
+      phone: "+481231231232",
+      avatar: "",
+      stats: [],
+      isCollapsed: false,
+    },
+    {
+      username: "J Kowalski",
+      tag: "Admin",
+      location: "Warsaw",
+      phone: "+481231231232",
+      avatar: "",
+      stats: [],
+      isCollapsed: false,
+    },
+    {
+      username: "J Kowalski",
+      tag: "Admin",
+      location: "Warsaw",
+      phone: "+481231231232",
+      avatar: "",
+      stats: [],
+      isCollapsed: false,
+    },
+  ]
 
   const prop = {
     title: titleText,
@@ -19,22 +49,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header {...prop} />
-      <Header title={titleText} list={list} />
-      <main>
-        <section>
-          <h2>Sekcja 1</h2>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
-            corrupti aliquid commodi repellat nobis voluptatibus ipsum minima
-            blanditiis quam beatae quos nostrum nihil, ducimus harum temporibus
-            hic aperiam, asperiores doloremque.
-          </p>
-        </section>
-      </main>
-      <footer>
-        <span>Footer</span>
-      </footer>
+      {/* <ClassComponent />
+      <FunctionComponent /> */}
+      <Profile />
     </div>
   );
 };
