@@ -1,0 +1,30 @@
+export const profileList = [
+  {
+    _id: '123',
+    username: "J Kowalski",
+    tag: "Admin",
+    location: "Warsaw",
+    phone: "+481231231232",
+    avatar: "https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp",
+    stats: [],
+    isCollapsed: false,
+  },
+  {
+    username: "J Nowak",
+    tag: "Admin",
+    location: "Warsaw",
+    phone: "+481231231232",
+    avatar: "",
+    stats: ['1 message', '3 comments'],
+    isCollapsed: false,
+  },
+  {
+    username: "J Kowalski",
+    tag: "Admin",
+    location: "Warsaw",
+    phone: "+481231231232",
+    avatar: "",
+    stats: ['3 messages', '5 comments'],
+    isCollapsed: false,
+  },
+]

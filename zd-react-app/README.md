@@ -24,3 +24,9 @@ nazwe) (isCollapsed: false)
 - Profile type powinien zostac rozszerzony o wlasciwosc "_id: string"
 - wlasciwosc "_id" bedzie przekazywana do atrybutu key w metodzie map
 - Zakonczone zadanie - wyswietlana lista profili
+
+## zadanie 3
+- stwórz komponent SearchForm (sklada sie z input + button)
+- input bedzie przyjmowal wartosc ze zmiennej searchTerm (przekazywana przez propsy w App.tsx)
+- input bedzie oblugiwal event onChange z funkcja o nazwie handleSearchTerm (przekazywana przez propsy w App.tsx)
+- skonczone zadanie to wpisanie wyszukiwanego "username" i przefiltrowania tablicy po wcisnieciu przycisku

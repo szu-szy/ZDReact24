@@ -1,57 +1,30 @@
 import "./App.scss";
-import { ClassComponent } from "./components/ClassComponent";
-import { FunctionComponent } from "./components/FunctionComponent";
 import { Profile } from "./components/Profile";
-
-// Zadanie nr 1
-// Stworzyć komponent main -> zawiera komponent Title (h1) oraz komponent artykuł (article)
-// Stworzyć komponent footer -> informacje o stronie, autor, nazwa kursu, data
-// komponenty powinny zawierac podstawowe style
+import { ProfileList } from "./components/ProfileList";
+import { profileList } from "./utils/mockUsers";
 
 const App = () => {
-  const titleText = "tytul naszej strony";
-  const list = ["home", "contact", "gallery", "cos"];
-  const profileList = [
-    {
-      _id: '123',
-      username: "J Kowalski",
-      tag: "Admin",
-      location: "Warsaw",
-      phone: "+481231231232",
-      avatar: "",
-      stats: [],
-      isCollapsed: false,
-    },
-    {
-      username: "J Kowalski",
-      tag: "Admin",
-      location: "Warsaw",
-      phone: "+481231231232",
-      avatar: "",
-      stats: [],
-      isCollapsed: false,
-    },
-    {
-      username: "J Kowalski",
-      tag: "Admin",
-      location: "Warsaw",
-      phone: "+481231231232",
-      avatar: "",
-      stats: [],
-      isCollapsed: false,
-    },
-  ]
+  let searchTerm = '';
+  const handleSearch = () => {
 
-  const prop = {
-    title: titleText,
-    list,
-  };
+  }
 
   return (
     <div className="App">
-      {/* <ClassComponent />
-      <FunctionComponent /> */}
-      <Profile />
+      {/* 1 opcja uzycia mapy */}
+      <ProfileList list={profileList}/>
+      
+      {/* 2 opcja uzycia mapy */}
+      {/* {profileList.map(profile => (
+        <div>
+          <Profile {...profile} />
+        </div>
+      ))} */}
+
+      {/* 3 opcja uzycia mapy */}
+      {/* {profileList.map(profile => {
+        return <Profile {...profile}/>
+      })} */}
     </div>
   );
 };

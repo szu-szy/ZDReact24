@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-type ProfileType = {
+export type ProfileType = {
   _id?: string;
   username: string;
   tag: string;
@@ -8,20 +8,31 @@ type ProfileType = {
   phone: string;
   avatar?: string;
   stats: string[];
-  isCollapsed: boolean;
+  isCollapsed?: boolean; // jezeli nie podamy to === undefined
 };
 
 export class Profile extends Component<{}, ProfileType> {
-  constructor(props: any) {
+  constructor(props: ProfileType) {
     super(props);
+    // pobranie danych z propsów
+    const {
+      username,
+      tag,
+      location,
+      phone,
+      avatar,
+      stats,
+      isCollapsed
+    } = props
+
     this.state = {
-      username: "J Kowalski",
-      tag: "Admin",
-      location: "Warsaw",
-      phone: "+481231231232",
-      avatar: "",
-      stats: [],
-      isCollapsed: false,
+      username,
+      tag,
+      location,
+      phone,
+      avatar,
+      stats,
+      isCollapsed,
     };
   }
 
