@@ -1,10 +1,18 @@
-import { Profile, ProfileType } from "../Profile"
+import { Profile, ProfileType } from "../Profile";
 
 type ProfileListProps = {
   list: ProfileType[];
-  // handleSubmit: () => void;
-}
+  searchTerm: string;
+};
 
-export const ProfileList = ({ list }: ProfileListProps) => (
-  list.map(profile => <Profile {...profile}/>)
-)
+export const ProfileList = ({ list, searchTerm }: ProfileListProps) => {
+  return (
+    <div>
+      {list
+        .filter(({ username }) => username.includes(searchTerm))
+        .map((profile) => (
+          <Profile key={profile._id} {...profile} />
+        ))}
+    </div>
+  );
+};

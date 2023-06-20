@@ -1,32 +1,55 @@
+import { ChangeEvent } from "react";
 import "./App.scss";
 import { Profile } from "./components/Profile";
 import { ProfileList } from "./components/ProfileList";
+import { SearchForm } from "./components/SearchForm";
 import { profileList } from "./utils/mockUsers";
+import React from "react";
 
-const App = () => {
-  let searchTerm = '';
-  const handleSearch = () => {
+type AppProps = {
+  searchTermValue: string;
+};
 
+class App extends React.Component<{}, AppProps> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      searchTermValue: "",
+    };
   }
 
-  return (
-    <div className="App">
-      {/* 1 opcja uzycia mapy */}
-      <ProfileList list={profileList}/>
-      
-      {/* 2 opcja uzycia mapy */}
-      {/* {profileList.map(profile => (
-        <div>
-          <Profile {...profile} />
-        </div>
-      ))} */}
+  handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      searchTermValue: event.target.value,
+    });
+  };
 
-      {/* 3 opcja uzycia mapy */}
-      {/* {profileList.map(profile => {
-        return <Profile {...profile}/>
-      })} */}
-    </div>
-  );
-};
+  render() {
+    const { searchTermValue } = this.state;
+
+    return (
+      <div className="App">
+        {/* 1 opcja uzycia mapy */}
+        <SearchForm
+          searchTerm={searchTermValue}
+          handleSearchTerm={this.handleSearch}
+        />
+        <ProfileList list={profileList} searchTerm={searchTermValue} />
+
+        {/* 2 opcja uzycia mapy */}
+        {/* {profileList.map(profile => (
+          <div>
+            <Profile {...profile} />
+          </div>
+        ))} */}
+
+        {/* 3 opcja uzycia mapy */}
+        {/* {profileList.map(profile => {
+          return <Profile {...profile}/>
+        })} */}
+      </div>
+    );
+  }
+}
 
 export default App;

@@ -1,7 +1,7 @@
 export const profileList = [
   {
     _id: '123',
-    username: "J Kowalski",
+    username: "Jan Kowalski",
     tag: "Admin",
     location: "Warsaw",
     phone: "+481231231232",
@@ -10,7 +10,8 @@ export const profileList = [
     isCollapsed: false,
   },
   {
-    username: "J Nowak",
+    _id: '1234',
+    username: "Jędrek Nowak",
     tag: "Admin",
     location: "Warsaw",
     phone: "+481231231232",
@@ -19,7 +20,8 @@ export const profileList = [
     isCollapsed: false,
   },
   {
-    username: "J Kowalski",
+    _id: '12345',
+    username: "Jerzy Kowalski",
     tag: "Admin",
     location: "Warsaw",
     phone: "+481231231232",
