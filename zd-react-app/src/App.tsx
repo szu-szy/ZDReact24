@@ -5,6 +5,7 @@ import { ProfileList } from "./components/ProfileList";
 import { SearchForm } from "./components/SearchForm";
 import { profileList } from "./utils/mockUsers";
 import React from "react";
+import { Form } from "./components/Form";
 
 type AppProps = {
   searchTermValue: string;
@@ -29,6 +30,7 @@ class App extends React.Component<{}, AppProps> {
 
     return (
       <div className="App">
+        {/* <Form /> */}
         {/* 1 opcja uzycia mapy */}
         <SearchForm
           searchTerm={searchTermValue}
