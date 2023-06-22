@@ -7,6 +7,7 @@ import { profileList } from "./utils/mockUsers";
 import React from "react";
 import { Form } from "./components/Form";
 import { Counter } from "./components/Counter";
+import { Input } from "./components/Input";
 
 type AppProps = {
 	searchTermValue: string;
@@ -39,7 +40,8 @@ class App extends React.Component<{}, AppProps> {
 
 		return (
 			<div className="App">
-				<Counter />
+				{/* <Counter /> */}
+				<Input />
 				{/* <Form handleAddUser={this.handleAddUser}/>
 				<ProfileList list={profileList} searchTerm={searchTermValue} /> */}
 			</div>

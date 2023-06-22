@@ -38,3 +38,24 @@ nazwe) (isCollapsed: false)
 - Dodatkowo powinnismy dodać do stanu naszej aplikacji (App.tsx) stan przetrzymujący listę elementów która podczas uruchomienia aplikacji przypisuje liste zamockowanych danych
 - nalezy dodac liste do typu naszej aplikacji
 - po nacisnieciu przycisku powinno wywolac funkcje która doda obiekt o typie ProfileType do naszej listy (dzieki funkcji która bedzie utworzona w App.tsx i przekazywana jak props do komponentu Form)
+
+## zadanie 5
+- stworz licznik kliknięć co 5
+- oraz formularz składający się z imienia i telefonu który posiada podgląd live
+- jedna z metod powinna informować w konsoli że dana propertka w obiekcie stanu się zmieniła (kazda oddzielny console.log)
+- nalezy wykorzystać wszystkie potrzebne metody (jezeli metoda nie wniesie nic co dzialania kodu to proszę ją pominąć)
+
+// do domu
+
+## zadanie 6
+- stwórz stoper składający się tylko z sekund i minut
+- stoper powinien startowac na przycisk start
+- zastrzymywac się na przycisk stop
+- stoper po odmontowaniu komponentu powwinien się zatrzymac (clearInterval(refIntervalID))
+
+//
+
+## zadanie 7
+- stwórz komponent funkcyjny przechowujący formularz oraz stan formularza (imie <string> oraz numer buta <number>)
+- formularz składa sie z 2 inputów + przycisk button type submit
+- zawiera rowniez podglad w czasie rzeczywistym
