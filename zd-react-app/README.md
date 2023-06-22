@@ -30,3 +30,11 @@ nazwe) (isCollapsed: false)
 - input bedzie przyjmowal wartosc ze zmiennej searchTerm (przekazywana przez propsy w App.tsx)
 - input bedzie oblugiwal event onChange z funkcja o nazwie handleSearchTerm (przekazywana przez propsy w App.tsx)
 - skonczone zadanie to wpisanie wyszukiwanego "username" i przefiltrowania tablicy po wcisnieciu przycisku
+
+
+## Zadanie 4
+- stwórz Komponent Form który przechowuje formularz do tworzenia osoby
+- Formularz posiada swój stan skladający się z propertisów o typie ProfileType
+- Dodatkowo powinnismy dodać do stanu naszej aplikacji (App.tsx) stan przetrzymujący listę elementów która podczas uruchomienia aplikacji przypisuje liste zamockowanych danych
+- nalezy dodac liste do typu naszej aplikacji
+- po nacisnieciu przycisku powinno wywolac funkcje która doda obiekt o typie ProfileType do naszej listy (dzieki funkcji która bedzie utworzona w App.tsx i przekazywana jak props do komponentu Form)
